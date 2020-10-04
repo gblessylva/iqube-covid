@@ -26,6 +26,39 @@ button{
 }
 
 body{
-  background-color: black;
-  color: white;
+  color:black;
+  background: #e2e1e0;
+}
+.dashboard{
+  padding:20px;
+  width:90%;
+  margin: 20px auto;
+}
+header{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header-card {
+  background: #fff;
+  border-radius: 2px;
+  height: 300px;
+  margin: 1rem;
+  width: 300px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

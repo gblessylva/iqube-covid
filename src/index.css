@@ -28,11 +28,18 @@ button{
 body{
   color:black;
   background: #e2e1e0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .dashboard{
   padding:20px;
   width:90%;
   margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 header{
   display: flex;
@@ -40,25 +47,88 @@ header{
   flex-direction: column;
   align-items: center;
 }
+header h1{
+ color: #0c0e38;
+}
 .header-card {
   background: #fff;
   border-radius: 2px;
-  height: 300px;
+  font-weight: 700;
+  font-size: 16px;
+  height: 150px;
   margin: 1rem;
-  width: 300px;
+  text-align: center;
+  width: 150px;
+  color:#0c0e38;
+  padding:10px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.header-card span{
+  color:tomato;
+  display: block;
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  
+}
+.header-info{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header-info  >*{
+  flex-basis: 150px;
+  flex-grow: 1;  
 }
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 96%;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 10px;
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 20px;
+}
+
+th{
+  color: #0c0e38;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+.loading{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.loader{
+  width: 1%;
+  height: 2px;
+  background-color: rebeccapurple;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: load 1s forwards  infinite;
+}
+
+@keyframes load {
+  from{
+    width: 0%;
+  }
+ 
+  to{
+    width: 100%;
+  }
 }

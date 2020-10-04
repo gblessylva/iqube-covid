@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import * as actionCreators from "../actions/index.js"
+import Loading from '../component/loading'
 
 class BoxCon extends React.Component{
     componentDidMount(){
@@ -9,9 +10,9 @@ class BoxCon extends React.Component{
     render(){
         const {data} = this.props.result
         const ngState = [];
-        console.log(data)
+    
         return(
-            (typeof data === 'undefined') ? <div className="loading"> Loading</div>  
+            (typeof data === 'undefined') ? <div className="loading"> <Loading /></div>  
             :
             <div className="dashboard">
                  {data.states.map(state=>{
@@ -21,7 +22,8 @@ class BoxCon extends React.Component{
                      <h1>iQube Redux Covid 19 Info</h1> 
                      <div className='header-info'>
                          <div className="header-card">
-                             <p>Total Death: <span>{data.death}</span> </p>
+                             <p>Total Death  </p>
+                             <span>{data.death}</span>
                          </div>
                          <div className="header-card">
                              <p>Total Active Cases </p>
